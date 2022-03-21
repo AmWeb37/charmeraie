@@ -15,31 +15,36 @@
     <!-- Le custom css -->
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style-desktop.css"> -->
 </head>
 <body>
+    <button onclick="topFunction()" class="back ir" id="back" title="Go to top">back</button>  
     <header class="header-page " id="navbar">
         <div class="header-top" id="header-top">
             <div class="header-section">
                 <div class="container">
-                    <ul class="header-list">
-                        <li class="header-list-item">item1</li>
-                        <li class="header-list-item">item2</li>
-                        <li class="header-list-item">item3</li>
+                    <!-- Nav des langues -->
+                    <ul class="header-list" id="lang-menu">
+                        <li class="header-list-item"><a href="#">FR</a></li>
+                        <li class="header-list-item"><a href="#">ENGL</a></li>
                     </ul>
-                    <ul class="header-list">
-                        <li class="header-list-item">item1</li>
-                        <li class="header-list-item">item2</li>
-                        <li class="header-list-item">item3</li>
+                    <!-- Nav contacts -->
+                    <ul class="header-list" id="contact-menu">
+                        <li class="header-list-item"><a href="#"><i class="fa fa-address-book" aria-hidden="true"></i>Notre livre d'or</a></li>
+                        <li class="header-list-item"><a href="#">+33(0)6 58 13 45 86<i class="tel" aria-hidden="true"></i></a></li>
+                        <li class="header-list-item"><a href="#">Mail</a></li>
+
                     </ul>
                 </div>
             </div>
             <div class="header-section">
                 <div class="container">
-                    <ul class="header-list">
-                        <li class="header-list-item">item1</li>
-                        <li class="header-list-item">item2</li>
-                        <li class="header-list-item">item3</li>
-                        <li class="header-list-item">item4</li>
+                    <ul class="header-list" id="site-menu">
+                        <li class="header-list-item"><a href="#">Visite du gite</a></li>
+                        <li class="header-list-item"><a href="#">Coin détente</a></li>
+                        <li class="header-list-item"><a href="#">Nos services</a></li>
+                        <li class="header-list-item"><a href="#">Notre région</a></li>
+
                     </ul>
                 </div>
             </div>
@@ -47,26 +52,31 @@
                 <div class="container">
                     <div class="brand ir" >logo</div>
                     <div class="wrap-btn">
-                        <a href="#" class="btn-primary">Mon CTA</a>
+                        <a href="#" class="btn-primary">Réservez vôtre séjour</a>   
                     </div>
+
                 </div>
             </div>
         </div>
         <div class="header-bottom" id="header-bottom">
             <div class="header-section ">
+                <div class="wrap-btn backToTop">
+                    <a href="#apropos" class="back"></a>   
+                </div>
                 <div class="container">
                     <ul class="header-list">
-                        <li class="header-list-item">item1</li>
-                        <li class="header-list-item">item2</li>
-                        <li class="header-list-item">item3</li>
-                        <li class="header-list-item">item4</li>
+                        <li class="header-list-item"><a href="#" class="menuBottomLink"><span class="icon ir">home</span>Visite</a></li>
+                        <li class="header-list-item"><a href="#" class="menuBottomLink"><span class="icon ir">piscine</span>Piscine-spa</a></li>
+                        <li class="header-list-item"><a href="#" class="menuBottomLink"><span class="icon ir">skills</span>Services</a></li>
+                        <li class="header-list-item"><a href="#" class="menuBottomLink"><span class="icon ir">contacts</span>Contacts</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </header>
     <main>
-        <section class="page-hero">
+        <!-- section hero de page -->
+        <section class="page-hero" id="apropos">
             <div class="container">
                 <div class="grid-section">
                     <div class="content content1">
@@ -77,7 +87,7 @@
                     <div class="content content2 content-img">
                         <div class="wrap-img">
                             <div class="illustationSection">
-                                <img src="/Assets/img/cuis01.webp" alt="image de la cuisine  du gite">
+                                <img src="/Assets/img/ext01.webp" alt="image de la cuisine  du gite">
                             </div>
                         </div>
                     </div>
@@ -85,17 +95,18 @@
             </div>
         </section>
         <!-- section avec un slider -->
-        <section>
+        <section id="visite">
             <div class="container">
-                <h2 class="titreSection">Titre de section</h2>
+                <h2 class="titreSection">On vous fait la visite<span class="titreSurbrillant">&nbsp Faites comme chez vous</span></h2>
                 <p class="contentText"><strong>Lorem ipsum dolor sit amet</strong> , consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. <em>Lorem ipsum dolor sit amet</em>, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet</p>
                 <!-- le slider -->
                 <div class="glide">
                     <!-- Les slides -->
                     <div class="glide__track" data-glide-el="track">
                       <ul class="glide__slides">
+                        <!-- Card   -->
                         <li class="glide__slide">
-                            <a href="#" class="card-link">
+                            <a href="template-piece.html" class="card-front">
                                 <div class="card-img">
                                     <img src="/Assets/img/cuis01.webp" alt="image de la cuisine  du gite">
                                 </div>
@@ -104,14 +115,61 @@
                                 <p class="card-text text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim dolor temporibus laudantium commodi quae dolores sapiente perferendis cumque quisquam sunt.</p>
                                 </div>
                             </a>
-                        </li>
-                       
+                        </li>     
+                        <!-- Card   -->
+                        <li class="glide__slide">
+                            <a href="template-piece.html" class="card-front">
+                                <div class="card-img">
+                                    <img src="/Assets/img/cbr01-1.webp" alt="image de la chambre 01">
+                                </div>
+                                <div class="card-body">
+                                <h3 class="card-title text-center">Chambre 1</h3>
+                                <p class="card-text text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim dolor temporibus laudantium commodi quae dolores sapiente perferendis cumque quisquam sunt.</p>
+                                </div>
+                            </a>
+                        </li>     
+                        <!-- Card   -->
+                        <li class="glide__slide">
+                            <a href="template-piece.html" class="card-front">
+                                <div class="card-img">
+                                    <img src="/Assets/img/cbr02-1.webp" alt="image de la chambre 02">
+                                </div>
+                                <div class="card-body">
+                                <h3 class="card-title text-center">Chambre 2</h3>
+                                <p class="card-text text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim dolor temporibus laudantium commodi quae dolores sapiente perferendis cumque quisquam sunt.</p>
+                                </div>
+                            </a>
+                        </li>     
+                        <!-- Card   -->
+                        <li class="glide__slide">
+                            <a href="template-piece.html" class="card-front">
+                                <div class="card-img">
+                                    <img src="/Assets/img/cbr03-1.webp" alt="image de la chambre 03">
+                                </div>
+                                <div class="card-body">
+                                <h3 class="card-title text-center">Chambre 3</h3>
+                                <p class="card-text text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim dolor temporibus laudantium commodi quae dolores sapiente perferendis cumque quisquam sunt.</p>
+                                </div>
+                            </a>
+                        </li>     
+                        <!-- Card   -->
+                        <li class="glide__slide">
+                            <a href="template-piece.html" class="card-front">
+                                <div class="card-img">
+                                    <img src="/Assets/img/salon01.webp" alt="image du salon">
+                                </div>
+                                <div class="card-body">
+                                <h3 class="card-title text-center">le Salon</h3>
+                                <p class="card-text text-start">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim dolor temporibus laudantium commodi quae dolores sapiente perferendis cumque quisquam sunt.</p>
+                                </div>
+                            </a>
+                        </li>     
                       </ul>
                     </div>
                     <!-- les commandes -->
                     <div class="glide__arrows" data-glide-el="controls">
-                        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
-                        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+                        <button class="glide__arrow glide__arrow--left ir" data-glide-dir="<">prev</button>
+                        <button class="glide__arrow glide__arrow--right ir" data-glide-dir=">">next</button>
                     </div>
                     <!-- les dots -->
                     <div class="glide__bullets" data-glide-el="controls[nav]">
@@ -123,37 +181,32 @@
             </div>
         </section>
         <!-- section avec des cards -->
-        <section>
+        <section id="detente">
             <div class="container">
-                <h2 class="titreSection">Titre de section</h2>
+                <h2 class="titreSection">Et que diriez-vous d'un moment<span class="titreSurbrillant">&nbspde détente</span></h2>
                 <ul class="contentCard">
                     <li class="contentItem">
                         <a href="#" class="card-link">
-                            <div class="card-img">
-                                <img src="..." alt="">
-                            </div>
+                            <div class="card-img"></div>
                             <div class="card-body">
-                                <h3 class="card-title text-center">La cuisine</h3>
+                                <h3 class="card-title text-center">Dans Spa Jacuzzi</h3>
+                            </div>
+                        </a>
+                         
+                    </li>
+                    <li class="contentItem">
+                        <a href="#" class="card-link">
+                            <div class="card-img"></div>
+                            <div class="card-body">
+                                <h3 class="card-title text-center">Nôtre piscine</h3>
                             </div>
                         </a>
                     </li>
                     <li class="contentItem">
                         <a href="#" class="card-link">
-                            <div class="card-img">
-                                <img src="..." alt="">
-                            </div>
+                            <div class="card-img"></div>
                             <div class="card-body">
-                                <h3 class="card-title text-center">La cuisine</h3>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="contentItem">
-                        <a href="#" class="card-link">
-                            <div class="card-img">
-                                <img src="..." alt="">
-                            </div>
-                            <div class="card-body">
-                                <h3 class="card-title text-center">La cuisine</h3>
+                                <h3 class="card-title text-center">Nôtre jardin</h3>
                             </div>
                         </a>
                     </li>
@@ -163,15 +216,15 @@
             </div>
         </section>
         <!-- section grille impaire -->
-        <section>
+        <section id="services">
             <div class="container">
-                <h2 class="titreSection">Titre de section</h2>
+                <h2 class="titreSection">Organisez vos vacances à<span class="titreSurbrillant">&nbspde  la Charmeraie</span></h2>
 
                 <div class="grid-section">
                     <div class="content content1 content-img">
                         <div class="wrap-img">
                             <div class="illustationSection">
-                                <img src="/Assets/img/cuis01.webp" alt="image de la cuisine  du gite">
+                                <img src="/Assets/img/panier.webp" alt="image de la cuisine  du gite">
                             </div>
                         </div>
                     </div>
@@ -181,7 +234,7 @@
                             <h3 class="titreArticle">Titre du widget</h3>
                             <p class="contentText"><strong>Lorem ipsum dolor sit amet</strong> , consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. <em>Lorem ipsum dolor sit amet</em>, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet</p>
                             <div class="wrap-btn">
-                                <a href="#" class="btn-primary">mon bouton</a>
+                                <a href="#" class="btn-primary">En savoir plus</a>
                             </div>
                         </div>
                     </div>
@@ -189,9 +242,9 @@
             </div>
         </section>
         <!-- section grille paire -->
-        <section>
+        <section id="notre-region">
         <div class="container">
-            <h2 class="titreSection">Titre de section</h2>
+            <h2 class="titreSection">Découvrez notre région.<span class="titreSurbrillant">&nbspC'est l'occasion </span></h2>
 
             <div class="grid-section">
                 <div class="content content1">
@@ -202,8 +255,8 @@
                 </div>
                 <div class="content content2 content-img">
                     <div class="wrap-img">
-                        <div class="illustationSection">
-                            <img src="/Assets/img/cuis01.webp" alt="image de la cuisine  du gite">
+                        <div class="croquis">
+                            <img src="/Assets/illustrations/book.svg" alt="image de la cuisine  du gite">
                         </div>
                     </div>
                 </div>
@@ -221,37 +274,36 @@
             <div class="footer-infos">
                 <ul class="list">
                     <li class="list-item">
-                        <h3 class="itemTitre">Titre de l'item</h3>
+                        <h3 class="itemTitre">Stéphanie<span class="titreSurbrillant">&nbspvôtre Hôte </span> </h3>
                         <p class="itemText">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
                         <ul class="list-liens">
-                            <li class="item-lien"><a class="lien" href="#">lien</a></li>
-                            <li class="item-lien"><a class="lien" href="#">lien</a></li>
-                            <li class="item-lien"><a class="lien" href="#">lien</a></li>
+                            <li class="item-lien"><a class="lien" href="#">Présentation de<span class="titreSurbrillant">&nbspvôtre hôte</span> </a></li>
+                            <li class="item-lien"><a class="lien" href="#">Découvrez nôtre livre d'or</a></li>
                         </ul>
                         <ul class="list-rs">
                             <li class="item-rs"><a class="rs ir" href="facebook">Facebook</a></li>
-                            <li class="item-rs"><a class="rs ir" href="youtube">Youtube</a></li>
                             <li class="item-rs"><a class="rs ir" href="instagram">Instagram</a></li>
+                            <li class="item-rs"><a class="rs ir" href="phone">0658134586</a></li>
                         </ul>
                     </li>
                     <li class="list-item">
-                        <h3 class="itemTitre">Titre de l'item</h3>
+                        <h3 class="itemTitre">Nous localiser<span class="titreSurbrillant">&nbsp </span> </h3>
                         <p class="itemText">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
                         <ul class="list-liens">
-                            <li class="item-lien"><a class="lien" href="#">lien</a></li>
+                            <li class="item-lien"><a class="lien" href="#">Voir la carte<span class="titreSurbrillant">&nbspd'accès </span></a></li>
                         </ul>
                     </li>
                     <li class="list-item">
-                        <h3 class="itemTitre">Titre de l'item</h3>
+                        <h3 class="itemTitre">Réservations<span class="titreSurbrillant">&nbspet tarifs </span> </h3>
                         <p class="itemText">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
                         <ul class="list-liens">
-                            <li class="item-lien"><a class="lien" href="#">lien</a></li>
-                            <li class="item-lien"><a class="lien" href="#">lien</a></li>
-                            <li class="item-lien"><a class="lien" href="#">lien</a></li>
+                            <li class="item-lien"><a class="lien" href="#">Tarifs et services</a></li>
+                            <li class="item-lien"><a class="lien" href="#">Conditions générales</a></li>
+                            <li class="item-lien"><a class="lien" href="#">Plan du site</a></li>
                         </ul>
                         <ul class="list-btn">
-                            <li class="item-btn"><a class="btn-primary" href="#">bouton 1</a></li>
-                            <li class="item-btn"><a class="btn-primary" href="#">bouton 2</a></li>
+                            <!-- <li class="item-btn"><a class="btn-primary" href="#">Estimez vôtre séjour</a></li> -->
+                            <li class="item-btn"><a class="btn-primary" href="#">Réservez vôtre séjour</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -260,6 +312,9 @@
     </footer>
     <!-- Script commandes -->
     <script src="/js/scrollToHide.js"></script>
+    <script src="/js/back.js"></script>
+    
+
     
     <!-- Glide-carousel -->
     <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
