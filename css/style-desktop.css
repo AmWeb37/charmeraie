@@ -1,0 +1,830 @@
+/* Reset CSS
+==================================================================== */
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+       /* .container{
+         border: 2px solid red;
+       }
+       .content{
+         border: 1px dashed rgb(36, 32, 238);
+       
+       } */
+
+/* Les Variables CSS
+===================================================================== */
+:root {
+  --main-bg-color: rgba(219, 205, 183,1);
+  --main-courant-color: rgba(8,8,7,1);
+  --main-important-color: rgba(54,155,72,1);
+  --main-sectionOdd-color: rgba(255, 182, 166,1);
+  --main-sectionEven-color: rgba(255, 255, 166,0.1);
+  --main-image-bg: rgba(218, 218, 212, 1);
+
+}
+/* La typographie
+====================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Laila:wght@300;400;500;600;700&display=swap');
+
+body{
+  font-family: 'Laila', sans-serif;
+  line-height: 1.5;
+  letter-spacing: normal;
+  overflow-wrap: break-word;
+  color: var(--main-courant-color);
+}
+a{
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+.baselineTitre{
+  font-family: 'Dancing Script', cursive;
+  line-height: 1;
+}
+.baselineTitre{
+  color: var(--main-important-color);
+}
+strong,
+.titreSurbrillant,
+em{
+  font-family: 'Dancing Script', cursive;
+  color: var(--main-important-color);
+}
+a,
+em{
+  color: var(--main-courant-color);
+}
+header a,
+footer a,
+.wrap-btn a{
+  font-family: 'Dancing Script', cursive;
+  color: var(--main-courant-color);
+  font-size: clamp(2rem, 1.5vw, 2.5rem);
+}
+.wrap-btn a{
+  color: var(--main-bg-color);
+}
+
+h1{
+  font-size: clamp(3.5rem, 5vw, 8rem);
+}
+h2,
+.baselineTitre{
+  font-size: clamp(2.5rem, 3vw, 4rem);
+}
+h3{
+  font-size: clamp(2rem, 2vw, 2.5rem);
+}
+strong,
+em{
+  font-size: clamp(2rem, 2vw, 2.5rem);
+}
+/* Le sections et container
+====================================================================== */
+body{
+  background: url(/Assets/background/background-wall.png) ;
+  background-repeat: repeat;
+  background-position: 0 -50px;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.header-top{
+  background: var(--main-bg-color);
+  background: linear-gradient(180deg, rgba(219, 205, 183,1) 0%, rgba(219, 205, 183,1) 11%, rgba(219, 205, 183,1) 51%, rgba(219, 205, 183,0.7) 89%, rgba(219, 205, 183,0.1) 100%);
+}
+section:nth-child(even){
+  background: var(--main-bg-color);
+  background: linear-gradient(0deg, rgba(219, 205, 183,0.1) 0%, rgba(219, 205, 183,0.7) 11%, rgba(219, 205, 183,1) 51%, rgba(219, 205, 183,0.7) 89%, rgba(219, 205, 183,0.1) 100%);
+}
+
+section{
+  padding-top: 8rem;
+  padding-bottom: 11rem;
+}
+/* les section avec une grille */
+.grid-section{
+    display: grid;
+}
+/* containers des cards */
+.contentCard{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.contentItem{
+  display: flex;
+  width: 32rem;
+  height: auto;
+  padding: 2rem ;
+}
+.contentItem a{
+  display: block;
+  width: 100%;
+}
+/* Mise en pge du hero de page */
+.page-hero{
+  padding-top: 30vh;
+  min-height: 80vh;
+}
+.page-hero .content1{
+  padding-top: 9rem;
+}
+/* Mises en page spécifiques */
+#notre-region .content1{
+  padding-top: 6rem;
+}
+/* GRILLE REPONSIVE
+==================================================================== */
+    /* Affichage mode mobile */
+.container {
+    width: 80%;
+}
+    /* Forcer l'élément 2 à s'afficher en premier en mode mobile */
+.grid-section .content-img{
+  grid-row: 1/2;
+}
+    /* Affichage mode tablette */
+  @media (min-width: 576px) {
+      .container {
+        max-width: 580px;
+      }
+    }
+  /* Affichage mode tablette */
+  @media (min-width: 576px) {
+    section:nth-child(odd) .grid-section{
+      grid-template-columns: 3fr 1.5fr;
+    }
+    section:nth-child(even) .grid-section{
+      grid-template-columns: 1.5fr 3fr;
+    }
+    /* Pour forcer la main à la mise en place auto */
+    .sectionEven .grid-section{
+      grid-template-columns: 3fr 1.5fr !important;
+    }
+    .grid-section .content:nth-child(2){
+      grid-column: 2/3;
+    }
+    .container {
+      max-width: 580px;
+    }
+  }
+  /* affichage mode pc portable */
+  @media (min-width: 992px) {
+    .container {
+        max-width: 990px;
+      }
+  }
+  /* affichage desktop  */
+  @media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+      }
+  }
+  /* affichage grand écran */
+  @media (min-width: 1600px) {
+    .container {
+        max-width: 1600px;
+      }
+  }
+/* LE HEADER
+=========================================================================*/
+/* position des elements du header */
+header{
+  width: 100vw;
+}
+.header-top{
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  transition: visibility 1s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+}
+.header-bottom{
+  position: fixed;
+  z-index: 1000;
+  bottom: 0;
+  width: 100vw;
+  transition: visibility 1s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+
+}
+.header-top .header-section:nth-child(1){
+  display: none;
+}
+.header-top .header-section:nth-child(2){
+  display: none;
+}
+.header-top .header-section:nth-child(3){
+  display: block;
+}
+@media (min-width: 576px) {
+  .header-bottom{
+    visibility: hidden;
+  }
+  .header-top .header-section:nth-child(1){
+    display: block;
+    padding: 1rem 0;
+  }
+  .header-top .header-section:nth-child(1) a{
+    font-size: 1.1em;
+  }
+  .header-top .header-section:nth-child(2){
+    display: block;
+    padding: 2rem 0;
+  }
+  .header-page li a::after{
+    content: '';
+    display: block;
+    height: 1px;
+    width: 1%;
+    position: relative;
+    left: 50%;
+    transform: translateY(-5px);
+    background: var(--main-important-color);
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  .header-page li a:hover{
+    color: var(--main-important-color);
+  }
+  .header-page li a:hover::after{
+    width: 100%;
+    left: 0;
+    opacity: 1;
+  }
+}
+/* animation au Srcoll */
+.disparitionTop{
+  visibility: 0;
+  transform: translateY(-500px);
+}
+.disparitionBottom{
+  visibility: 0;
+  transform: translateY(100px);
+}
+/* Les composants du header */
+header .container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+/* mise en page des navigations */
+.header-list{
+  flex: auto;
+  display: flex;
+}
+#lang-menu{
+  max-width: 16%;
+  justify-content: flex-start;
+}
+#lang-menu li:not(:first-child){
+  margin-left: 2.5rem;
+}
+#contact-menu{
+  max-width: 42%;
+  justify-content: flex-end;
+}
+#contact-menu li:not(:last-child){
+  margin-right: 2.5rem;
+}
+#site-menu{
+  max-width: 100%;
+  justify-content: space-between;
+}
+#site-menu li:nth-child(2){
+  margin-right: 15rem;
+}
+#site-menu li:nth-child(3){
+  margin-left: 15rem;
+}
+
+.header-top .header-section:nth-child(3) .container{
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5rem;
+}
+@media (min-width:1900px){
+  .header-top .header-section:nth-child(3) .container{
+    padding-top: 10rem;
+  }
+}
+/* Le header-bottom */
+.header-bottom .header-section{
+  padding: 4rem 0;
+}
+/* Les Composants
+===================================================================================== */
+
+/* Les boutons */
+.wrap-btn{
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+@media (min-width: 576px) {
+  .wrap-btn{
+    padding: 2rem 0 1rem 0;
+  }
+}
+.btn-primary{
+  display: block;
+  padding: 0.5rem 7rem;
+  border-radius: 3rem;
+  pointer-events: all;
+  background-color: var(--main-important-color);
+  background-image: radial-gradient(
+    farthest-corner at 100% 200%,
+    var(--main-important-color) 30%,
+    var(--main-courant-color) 100%
+  );
+
+}
+.btn-primary:hover,
+.btn-primary:focus{
+  background-color: var(--main-important-color);
+  background-image: radial-gradient(
+    farthest-corner at 0% -200%,
+    var(--main-important-color) 70%,
+    var(--main-courant-color) 100%
+    );
+  box-shadow: 6px 3px 30px rgba(8,8,7, 0.2);
+}
+
+/* Les boutons du footer */
+.list-btn li{
+  justify-content: flex-start;
+}
+.list-btn .btn-primary{
+  color: var(--main-bg-color);
+}
+/* Les logo */
+.brand{
+  display: block;
+  width: 20rem;
+  height: 20rem;
+  background-image: url(/Assets/brand/logo-charmeraie-indA\ copie.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+@media (min-width: 576px) {
+  .brand{
+    position: absolute;
+    width: 15vw;
+    height: 20vh;
+    top: 0rem;
+  }
+}
+/* les titres */
+.titrePage{
+  margin-bottom: 0;
+  width: 100%;
+}
+.titreSection{
+  margin-bottom: 7rem;
+  width: 100%;
+  text-align: center;
+}
+.baselineTitre{
+  margin-bottom: 5rem;
+}
+/* les textes */
+.contentText{
+  margin-bottom: 3rem;
+}
+.grid-section:nth-child(odd) .contentText{
+  max-width: 80%;
+}
+#notre-region .contentText{
+  max-width: 80%;
+
+}
+
+/* Les images */
+.content-img{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+}
+.illustationSection{
+  width: 32rem;
+  height: 47rem;
+  border: 2rem solid #FFFFFF;
+  box-shadow: 1px 3px 6px rgba(0, 0, 0,0.50);
+  position: relative;
+  z-index: 0;
+}
+.croquis{
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+.croquis img{
+  background: transparent;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+}
+.content-img:nth-child(even) .illustationSection{
+  background: #000;
+  transform: rotate(4deg);
+}
+.content-img:nth-child(odd) .illustationSection{
+  background: #000;
+  transform: rotate(-4deg);
+}
+img{
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  object-fit: cover;
+}
+/* Les illustrations des images principales*/
+.illustationSection::before{
+  content: '';
+  position: absolute;
+  z-index: 1;
+  bottom: -40%;
+  display: flex;
+  width: 30rem;
+  height: 28rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+.content-img:nth-child(even) .illustationSection::before{
+  transform: rotate(-4deg);
+  left: -20rem;
+}
+.content-img:nth-child(odd) .illustationSection::before{
+  transform: rotate(4deg);
+  right: -10rem;
+}
+#apropos .illustationSection::before{
+  background-image: url(/Assets/illustrations/illustration01.svg);
+}
+#services .illustationSection::before{
+  background-image: url(/Assets/illustrations/illustration02.svg);
+}
+
+/* Mise en forme des cards*/
+.card-title{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.card-text{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+    -webkit-line-clamp: 3; /* nombre de lignes à montrer */
+    -webkit-box-orient: vertical;
+
+}
+.contentCard .card-img{
+  width: 80%;
+  height: 20rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+}
+/* Les cards illustrées */
+#detente .contentCard .contentItem{
+  transition-property: all;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in;
+}
+#detente .contentCard .contentItem:nth-child(1) .card-img{
+  background: url(/Assets/illustrations/jacuzi.svg) no-repeat center;
+}
+#detente .contentCard .contentItem:nth-child(2) .card-img{
+  background: url(/Assets/illustrations/piscine.svg) no-repeat center;
+}
+#detente .contentCard .contentItem:nth-child(3) .card-img{
+  background: url(/Assets/illustrations/jardin.svg) no-repeat center;
+}
+/* Animation Hover et focus */
+#detente .contentCard .contentItem:hover{
+  border: 8px solid ;
+  border-image: url(/Assets/illustrations/cadre.png);
+  border-image-slice: 5;
+  border-image-outset: 0.45;
+  background: linear-gradient(137deg, rgba(219, 205, 183,1) 0%, rgba(219, 205, 183,0.5) 11%, rgba(219, 205, 183,0.4) 51%, rgba(219, 205, 183,0.4) 89%, rgba(219, 205, 183,0.1) 100%);
+  
+}
+#detente .contentCard .contentItem:hover .card-title{
+  color: var(--main-important-color);
+}
+/* Le slider de cards */
+.glide{
+  padding-bottom: 5rem;
+  position: relative;
+  perspective: 2000px;
+  perspective-origin: top;
+}
+.glide__slides{
+  padding: 5rem 0 !important;
+}
+.card-front{
+  display: block;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+}
+.glide__slide{
+  padding: 2rem;
+  min-width: 23rem;
+  border: 6px solid;
+  border-image: url(/Assets/illustrations/cadre.png);
+  border-image-slice: 5;
+  border-image-outset: 0.45;
+  background: var(--main-bg-color);
+  box-shadow: 6px 3px 30px rgba(8,8,7, 0.2);
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+}
+.glide__slide .card-link{
+  text-decoration: none;
+}
+.glide__slide--active{
+  box-shadow: 6px 3px 30px rgba(54,155,72, 0.3);    
+}
+.glide__slide .card-img{
+  width: 100%;
+  height: 22rem;
+  margin-bottom: 1rem;
+}
+.glide__arrow--right{
+  right: -2em;
+}
+.glide__arrow--left{
+  left: -2em;
+}
+.glide__bullets{
+  bottom: 1em;
+}
+/* Animation au hover */
+.glide__slide:hover{
+  box-shadow: 6px 3px 30px rgba(54,155,72, 1);
+
+} 
+.glide__slide .card-front:hover{
+  color: var(--main-important-color);
+
+}
+/* Les controles*/
+.glide__arrows button{
+  border: none;
+  box-shadow: none;
+  width: 9rem;
+  height: 8rem;
+  background-image: url(/Assets/illustrations/spritz-illustrat.svg);
+  transition-property: filter;
+  transition-duration: 1s;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  
+}
+.glide__arrow--right{
+  right: -10rem !important;
+  background-position: -329px -117px; 
+}
+.glide__arrow--left{
+  left: -10rem !important;
+  background-position: -316px 0;
+}
+/* Les dots*/
+.glide__bullets{
+  bottom: 1em !important;
+}
+.glide__bullets button{
+  width: 15px;
+  height: 15px;
+}
+.glide__bullet--active{
+  border: 2px solid var(--main-important-color);
+  background-color: var(--main-courant-color);
+}
+/* Les widget */
+.widget{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 6px solid;
+  border-image: url(/Assets/illustrations/cadre.png);
+  border-image-slice: 5;
+  border-image-outset: 0.45;
+}
+@media (min-width: 992px) {
+  .widget{
+    margin-left: 8rem;
+  }
+}
+/* Le footer */
+footer{
+  padding-top: 5rem;
+  background: var(--main-bg-color);
+  background: linear-gradient(0deg, rgba(219, 205, 183,1) 0%, rgba(219, 205, 183,1) 11%, rgba(219, 205, 183,1) 51%, rgba(219, 205, 183,0.7) 89%, rgba(219, 205, 183,0.1) 100%);
+  color: var(--main-courant-color);
+
+}
+footer .container{
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+}
+.footer-logo{
+  display: block;
+  width: 40rem;
+  height: 30rem;
+  background: url(/Assets/brand/logo-charmeraie-indA\ copie.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: contain;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer-infos .list{
+  margin-top: 7rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.footer-infos .list-item{
+  padding-left: 2rem;
+  border-left: 6px solid #fff;
+  border-image: url(/Assets/illustrations/cadre.png);
+  border-image-slice: 4;
+  border-image-outset: 0.45;
+}
+.footer-infos .itemTitre{
+  margin-bottom: 1.2rem;
+}
+.footer-infos .itemText{
+  max-height: 9rem;
+  margin-bottom: 2rem;
+}
+/* Liens vers ressources ext -----------*/
+.list-liens{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 3.5rem !important;
+}
+.list-liens li{
+  position: relative;
+}
+.list-liens a{
+  display: inline-block;
+}
+/* Les puces des liens */
+.list-liens li::before{
+  content: '';
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  background-image: url(/Assets/illustrations/arrow-right.png);
+  background-repeat: no-repeat;
+  background-position: 0 12px;
+  background-size: cover;
+}
+/* Les animations hover */
+.list-liens li a::after{
+  content: '';
+  display: block;
+  height: 1px;
+  width: 1%;
+  position: relative;
+  left: 50%;
+  transform: translateY(-5px);
+  background: var(--main-important-color);
+  opacity: 0;
+  transition: all 0.3s;
+}
+.list-liens li:hover a{
+  color: var(--main-important-color);
+}
+.list-liens li:hover a::after{
+  width: 100%;
+  left: 0px;
+  opacity: 1;
+}
+.list-liens li:hover::before{
+  background-position: 0 -9px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Liens vers réseaux sociaux -----------*/
+.list-rs{
+  display: flex;
+  justify-content: flex-start;
+  pointer-events: all;
+}
+.list-rs li{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: radial-gradient(
+    farthest-corner at 40px 40px,
+    var(--main-important-color) 0%,
+    var(--main-courant-color) 100%
+  );
+}
+.item-rs:not(:first-child){
+  margin-left: 1rem ;
+  position: relative;
+}
+.item-rs a::before{
+  content: 'icone';
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-image: url(/Assets/icon/iconRS.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transform: scale(0.6);
+  transition: all 0.4s ease-in-out;
+}
+.list-rs a[href*="facebook"]::before{
+  background-position: 12px 0;
+} 
+.list-rs a[href*="instagram"]::before{
+  background-position: -88px 0;
+}
+.list-rs a[href*="phone"]::before{
+  background-position: -191px 0;
+} 
+/* Animation hover et focus */
+.list-rs li:hover{
+  background: radial-gradient(
+    var(--main-important-color) 0%,
+    var(--main-courant-color) 200%
+  );
+}
+.list-rs li:hover a::before{
+  transform: scale(0.8);
+}
+/* Les boutons du footer */
+.item-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.item-btn:nth-child(2){
+  margin-top: 1rem;
+}
+/* Template pages specifiques
+-------------------------------------------------------------------------------------- */
+/* galerie de miniatures */
+.content-img {
+  position: relative;
+}
+.miniatures ul{
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  left: 0;
+}
+.miniatures ul li{
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  width: 12rem;
+  height: 16rem;
+}
+.miniatures ul li:not(:first-child){
+  margin-left: 2rem;
+}
+
+  
